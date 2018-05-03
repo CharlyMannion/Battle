@@ -3,6 +3,7 @@ require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
 require 'features/web_helpers'
+require 'player'
 
 ENV['RACK_ENV'] = 'test'
 

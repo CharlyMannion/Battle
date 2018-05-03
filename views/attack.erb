@@ -1,1 +1,9 @@
-<%= @player_1_name %> attacked <%= @player_2_name %>
+<h2><%= @player_1_name %> attacked <%= @player_2_name %></h2>
+
+<p><%= @player_2_name %> takes the hit! Ouch!</p>
+
+<%= @player_2_name %> <%= @player2_hp %>HP
+
+<form action="/play">
+  <input type="submit" value ="OK">
+</form>
