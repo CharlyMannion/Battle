@@ -1,3 +1,5 @@
+require './lib/game.rb'
+
 class Player
 
   attr_reader :name, :hit_points
