@@ -9,12 +9,12 @@ describe Game do
 
   describe '#initalize' do
     it 'should have a player 1' do
-      p expect(game.player_1.name).to eq :roxana
-      p game.player_1.name
+      expect(game.player_1.name).to eq :roxana
+      game.player_1.name
     end
 
     it 'should have a player 2' do
-      p expect(game.player_2.name).to eq :charly
+      expect(game.player_2.name).to eq :charly
     end
   end
 
