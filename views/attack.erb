@@ -1,8 +1,11 @@
-<h2><%= @player_1_name %> attacked <%= @player_2_name %></h2>
+<p><%= @game.player_1.name %></p>
+<p><%= $game.player_1.name %></p>
 
-<p><%= @player_2_name %> takes the hit! Ouch!</p>
+<h2><%= $game.player_1.name %> attacked <%= @game.player_2.name %></h2>
 
-<%= @player_2_name %> <%= @player2_hp %>HP
+<p><%= @game.player_2.name %> takes the hit! Ouch!</p>
+
+<%= @game.player_2.name %> <%= @game.player_2.hit_points %>HP
 
 <form action="/play">
   <input type="submit" value ="OK">

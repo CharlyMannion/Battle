@@ -1,8 +1,8 @@
 feature 'attacking' do
   scenario "attack player 2" do
-    sign_in_and_play
-    click_button('Attack')
-    expect(page).to have_content "Sally attacked Bob"
+    p sign_in_and_play
+    p click_button('Attack')
+    p expect(page).to have_content "Sally attacked Bob"
   end
 
   scenario "reduce player 2 HP by 10" do
