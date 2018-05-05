@@ -4,26 +4,25 @@ class Game
 
   attr_reader :player_1, :player_2, :turn, :players
 
-  def initialize(player_1, player_2, player_class_type=Player)
-    @player_1 = player_class_type.new(player_1)
-    @player_2 = player_class_type.new(player_2)
-    @players = [@player_1, @player_2]
-    @turn = player_1
+  def initialize(player_1, player_2)
+    @player_1 = player_1
+    @player_2 = player_2
+    @turn_counter = 0
   end
 
   def attack(player)
+    @turn_counter += 1
     player.receive_damage
   end
 
-  def change_turn
-    @turn = other_player
+  def chosen_player
+    @turn_counter % 2 == 0 ? @player_1 : @player_2
   end
-
-  private
 
   def other_player
-    @players.last
+    if chosen_player = @player_1 then other_player = @player_2
+    elsif chosen_player = @player_2 then other_player = @player_1
+    end
   end
-
 
 end
